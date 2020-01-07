@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+<head>
+    <title>北京尚学堂首页</title>
+</head>
+<body>
+    <form th:action="@{/user/updateUser}" method="post">
+        <input type="hidden" name="userid" th:value="${user.userid}"/>
+        <input type="text" name="realname" th:value="${user.realname}"><br/>
+        <input type="text" name="password" th:value="${user.password}"><br/>
+        <input type="text" name="age" th:value="${user.age}"><br/>
+        <input type="text" name="hobby" th:value="${user.hobby}"><br/>
+        <input type="date" name="enterdate" th:value="${user.enterdate}"><br/>
+        <input type="submit" value="OK"/>
+</form>
+</body>
+</html>
